@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      border: none;
+      color: #000000;
+      font-size: 16px;
+      cursor: pointer;
+      margin-right: 10px;
+      margin-top: 10px;
+    }
+
+    .circle {
+      border-radius: 50%;
+      background-color: #0026ff;
+    }
+    .triangle {
+        font-size: smaller;
+      position: relative;
+      width: 100px;
+      height: 100px;
+      background-color: #36a2eb;
+      border: none;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+    
+
+    .rectangle {
+      background-color: #7e7c77;
+    }
+
+    .shape-div {
+      width: 350px;
+      height: 200px;
+      background-color: #000000;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+    <div class="shape-div" id="shapeDiv"></div>
+    <br><br><br><br><br>
+  <button class="button circle" onclick="changeShape('circle')">Circle</button>
+  <button class="button triangle" onclick="changeShape('triangle')">Triangle</button>
+  <button class="button rectangle" onclick="changeShape('rectangle')">Rectangle</button>
+
+
+  <script>
+    function changeShape(shape) {
+      var shapeDiv = document.getElementById("shapeDiv");
+      shapeDiv.className = "shape-div " + shape;
+    }
+  </script>
+</body>
+</html>
